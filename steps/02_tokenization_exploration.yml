@@ -11,26 +11,60 @@ startFlow:
           - text: Before we dive deeper, let's start with the basics—tokenization.
           - text: Tokenization is a key preprocessing step that converts text into small, manageable parts—tokens—so that language models can handle them effectively.
           - text: Different tokenizers might convert the same sentence into varied forms of tokens, which influences how the model interprets the input.
-          - text: In this hands-on task, you'll explore tokenization with real code and get a close look at how sentences break down into tokens.
-          - text: Ready to see the magic unfold? Let's start turning sentences into tokens, and watch how text transforms in various forms.
-    - actionId: create_new_jupyter_notebook
-      params:
-        query: Create a Jupyter notebook for exploring tokenization with different Hugging Face tokenizers, including setup code and examples for tokenizing sentences
-    - actionId: bot_message
-      params:
-        person: lucca
-        messages:
-          - text: I've created a Jupyter notebook preloaded with setup code for tokenizing sentences using different tokenizers from Hugging Face.
-          - text: You can input various sentences and see how they tokenize across different models.
-          - text: "Here's what you need to do:"
-          - text: Enter different sentences to test how they are tokenized by different pre-trained models.
-          - text: Experiment with sentences of varying complexity and length.
-          - text: Try using text in various languages to fully explore the capabilities of tokenizers.
-    - actionId: ready_message
-      params:
-        person: lucca
+          - text: We've already given you code to help you with tokenization - open the `tokenizer.ipynb` notebook and use it to explore different tokenizers.
+          - text: |
+              :instruction[Using the GPT-2 tokenizer, find out how many tokens this sentence produces: "The quick brown fox jumps over the lazy dog." and respond with just the number.]
 trigger:
-  type: user_ready_response
+  type: user_message
+  params:
+    person: lucca
   flowNode:
     do:
-      - actionId: finish_step
+      - actionId: parse_user_response
+        name: user_token_count
+        params:
+          prompt: |
+            Please evaluate the user's answer for the tokenization challenge.
+
+            The user should respond with the number of tokens that the sentence 'The quick brown fox jumps over the lazy dog.' produces when tokenized with GPT-2. 
+
+            The correct answer is 10 tokens.
+
+            # Assessment Criteria
+            - Look for the number 10 in their response
+            - Accept variations like "10", "ten", "10 tokens", etc.
+            - Focus on whether they identified the correct token count
+
+            # Response Guidelines:
+            - If the user provides the correct answer (10), return 'correct: true'
+            - Provide a positive message congratulating them on understanding tokenization
+            - If the user provides an incorrect number, return 'correct: false'  
+            - Gently explain the correct answer and encourage them to try the tokenization again
+
+            # Tone and Style:
+            - Use friendly and encouraging language
+            - Be supportive of their learning process
+            - Focus on helping them understand tokenization concepts
+          schema:
+            correct: boolean
+            reply: string
+    if:
+      conditions:
+        - conditionId: is_truthy
+          params:
+            value: ${outputs.user_token_count.value.correct}
+      then:
+        do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+                - text: ${outputs.user_token_count.value.reply}
+          - actionId: finish_step
+      else:
+        do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+                - text: ${outputs.user_token_count.value.reply}
