@@ -1,0 +1,56 @@
+id: quiz_llm_core_features
+learningObjectives:
+  - Test your understanding of the foundational features of LLMs.
+hints:
+  - Think about how the model assigns importance to different parts of the input data.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Alright, it's quiz time! Let's see how well we've absorbed the magic of LLMs.
+          - text: How does the self-attention mechanism within the Transformer architecture contribute to its performance?
+    - actionId: quiz_message
+      name: quiz
+      params:
+        person: lucca
+        options:
+          - It helps the model focus on relevant parts of the input sentence.
+          - It enables the model to process data sequentially.
+          - It increases the complexity of the model exponentially.
+trigger:
+  type: chat_form_submitted
+  flowNode:
+    switch:
+      key: ${formSubmission}
+      cases:
+        A:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Exactly! This mechanism allows LLMs to weigh the importance of various words in a sentence for better contextual understanding.
+                  - text: "Resource: Chapter 3 - Exploring the Transformer Architecture in 'Hands-On Large Language Models'"
+            - actionId: finish_step
+        B:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Not quite. Sequential processing is not the main strength of self-attention.
+            - actionId: replay_action
+              params:
+                actionName: quiz
+        C:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Well, not necessarily. Self-attention uses fixed network sizes to balance complexity.
+            - actionId: replay_action
+              params:
+                actionName: quiz

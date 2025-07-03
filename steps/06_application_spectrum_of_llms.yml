@@ -1,0 +1,27 @@
+id: application_spectrum_of_llms
+learningObjectives:
+  - Discover the variety of applications where LLMs are making a significant
+    impact.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Now that we're familiar with the mechanics, let's zoom out and see where LLMs truly shine in the real world.
+          - text: From driving conversation in chatbots to enabling complex analysis in business, LLMs are versatile soldiers on the digital front.
+          - text: They power tools you might use daily, enhancing productivity through automation and intelligent text processing.
+          - text: Understanding their applications helps us grasp their potential and limitations.
+          - text: In customer service, LLMs understand and respond to queries, offering solutions or directing users to human agents.
+          - text: In content generation, they assist authors, marketers, and educators in creating tailored content.
+          - text: Let's explore more about these applications and where they are truly transforming industries!
+          - text: "Resource: Chapter 6 - Practical LLM Applications in 'Hands-On Large Language Models'"
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

@@ -20,10 +20,13 @@ skills:
   - chatbot development
 steps:
   - understanding_large_language_models
+  - tokenization_exploration
   - the_architecture_of_llms
   - from_pretraining_to_fine_tuning
+  - simple_word_prediction
   - application_spectrum_of_llms
   - quiz_llm_core_features
+  - question_answering_system
   - practical_implications_and_future_of_llms
   - recap_and_takeaways
 type: MODULE

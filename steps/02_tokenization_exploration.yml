@@ -1,0 +1,36 @@
+id: tokenization_exploration
+learningObjectives:
+  - Understand tokenization as a crucial preprocessing step for Large Language Models.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Before we dive deeper, let's start with the basics—tokenization.
+          - text: Tokenization is a key preprocessing step that converts text into small, manageable parts—tokens—so that language models can handle them effectively.
+          - text: Different tokenizers might convert the same sentence into varied forms of tokens, which influences how the model interprets the input.
+          - text: In this hands-on task, you'll explore tokenization with real code and get a close look at how sentences break down into tokens.
+          - text: Ready to see the magic unfold? Let's start turning sentences into tokens, and watch how text transforms in various forms.
+    - actionId: create_new_jupyter_notebook
+      params:
+        query: Create a Jupyter notebook for exploring tokenization with different Hugging Face tokenizers, including setup code and examples for tokenizing sentences
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: I've created a Jupyter notebook preloaded with setup code for tokenizing sentences using different tokenizers from Hugging Face.
+          - text: You can input various sentences and see how they tokenize across different models.
+          - text: "Here's what you need to do:"
+          - text: Enter different sentences to test how they are tokenized by different pre-trained models.
+          - text: Experiment with sentences of varying complexity and length.
+          - text: Try using text in various languages to fully explore the capabilities of tokenizers.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

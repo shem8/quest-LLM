@@ -1,0 +1,24 @@
+id: recap_and_takeaways
+learningObjectives:
+  - Summarize the main learning points from the quest.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Wow, what a journey! Let's take a moment to reflect on what we've learned about Large Language Models.
+          - text: We've explored foundational concepts like tokenization and Transformer architecture, diving deep into the life cycle of LLMs from pretraining to fine-tuning.
+          - text: Practical applications have shown us the real-world impact these models can have, and we've peeked into the future, pondering the exciting and challenging possibilities ahead.
+          - text: Remember, LLMs are tools with vast potential—keep exploring, experimenting, and evolving your understanding.
+          - text: Thanks for joining me, Lucca, on this adventure. The future of AI looks bright with curious minds like yours ready to explore it!
+          - text: "Resource: 'Hands-On Large Language Models' for further reading and exploration."
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

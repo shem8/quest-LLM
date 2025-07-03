@@ -2,20 +2,27 @@ id: practical_implications_and_future_of_llms
 learningObjectives:
   - Reflect on the potential implications and future directions of LLMs.
 hints:
-  - Consider both the opportunities and challenges these models present.
+  - Consider LLMs in the context of automation and human-AI interaction.
+  - Reflect on balance between technological growth and ethical use.
 startFlow:
   do:
     - actionId: bot_message
       params:
         person: lucca
         messages:
-          - text: As we've explored throughout our journey, from creating text embeddings in Chapter 10 to understanding practical applications across all domains, LLMs continue to evolve rapidly.
-          - text:
-              Considering the current state of LLMs, how do you think they might shape
-              technology in the coming years?
-          - text:
-              I'd love to hear your thoughts or plans to integrate these models into
-              projects.
+          - text: We've covered a lot about how LLMs function and their applications. Now, let's think forward.
+          - text: Consider how LLMs might shape industries, redefine user experiences, or even introduce new ethical challenges.
+          - text: What are your thoughts on the most exciting or concerning aspects of LLMs' future?
+          - text: "Engage with these questions: How will LLMs evolve? What new frontiers could they open up, and what should we anticipate on the ethical landscape?"
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "Here's what you need to do:"
+          - text: Reflect on the transformational nature of LLMs and creatively envision future trends and ethical considerations.
+          - text: Discuss your viewpoint on both the positive advancements and potential pitfalls.
+          - text: "Expected outcome: Write a thoughtful response, providing insight into the future landscape that LLMs might create, considering trends in development and ethical standpoints."
+          - text: "Resource: Chapter 12 - The Future of Language Models in 'Hands-On Large Language Models'"
 trigger:
   type: user_message
   params:
@@ -29,8 +36,9 @@ trigger:
 
             \    Please evaluate the user's answer in relation to
             the expected answer: I expect reflections on the future impact of
-            LLMs, touching on their potential to advance AI technology and
-            improve efficiency in various sectors..
+            LLMs, covering how they might shape industries, redefine user experiences,
+            introduce ethical challenges, and evolve technologically. Look for insights
+            on both positive advancements and potential pitfalls in human-AI interaction..
 
             \    # Assessment Criteria
 

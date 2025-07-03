@@ -15,14 +15,16 @@ startFlow:
           - text:
               These models, often referred to as LLMs, have transformed AI, enabling
               machines to understand and generate human-like language.
-          - text: As we explore in Chapter 1 of "Hands-On Large Language Models," these systems represent a true inflection point in human-computer interaction.
           - text:
               Whether it's creating chatbots or building search engines, LLMs are making
               waves across numerous industries.
           - text:
               We'll begin by understanding the scope and utility of these models in
               real-world applications.
-          - text: Ready for this intellectual adventure? Let me know when to continue.
+          - text: Large Language Models (LLMs) are complex AI systems designed to understand, generate, and even translate human language.
+          - text: Their primary strength lies in their ability to predict what comes next in a sequence of text, similar to the way a brain might process language.
+          - text: LLMs underpin technologies such as chatbots, automated summarizers, and language translation tools.
+          - text: The scope of LLMs extends far beyond what's initially apparent—transforming industries by automating tasks and generating human-like text
     - actionId: ready_message
       params:
         person: lucca

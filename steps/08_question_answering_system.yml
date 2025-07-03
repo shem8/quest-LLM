@@ -1,0 +1,34 @@
+id: question_answering_system
+learningObjectives:
+  - Build a simple question-answering system using an LLM.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Let's put our LLM expertise to the test by creating a question-answering system!
+          - text: We'll use a pre-trained model, like BERT or DistilBERT, to handle input questions and find answers from provided text passages.
+          - text: This hands-on task is a great way to see how LLMs understand context and extract precise information.
+    - actionId: create_new_jupyter_notebook
+      params:
+        query: Create a Jupyter notebook for question-answering using pre-trained models like BERT or DistilBERT, including setup code for handling questions and text passages
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: I've created a Jupyter notebook equipped with a script to handle question-answering using pretrained models.
+          - text: "Here's what you need to do:"
+          - text: Input various questions based on provided text passages.
+          - text: Test the accuracy and relevancy of the model's answers.
+          - text: Modify and experiment with different datasets to explore adaptability.
+          - text: "Resources: Transformers QA Pipeline and Chapter 10 - Developing Q&A with LLMs in 'Hands-On Large Language Models'"
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

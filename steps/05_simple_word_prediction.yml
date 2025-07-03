@@ -1,0 +1,35 @@
+id: simple_word_prediction
+learningObjectives:
+  - Implement a word prediction model to demonstrate language understanding.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Roll up your sleeves—it's time to predict the future, one word at a time!
+          - text: We'll use pre-trained language models to guess what word might come next, given an input sequence.
+          - text: This is a fun way to see language models in action, flexing their understanding of context and syntax.
+          - text: Imagine finishing someone else's sentence accurately—it's all about picking up cues!
+    - actionId: create_new_jupyter_notebook
+      params:
+        query: Create a Jupyter notebook for word prediction using GPT-2, including setup code for next-word prediction with customizable parameters like temperature and max length
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: I've created a Jupyter notebook with a pre-configured script for next-word prediction using a language model like GPT-2.
+          - text: "Here's what you need to do:"
+          - text: Input partial sentences and observe the model's predicted continuations.
+          - text: Tweak parameters like temperature and max length to see how predictions change.
+          - text: Challenge yourself with complex sentences to explore the model's comprehension depth.
+          - text: "Resources: Hugging Face Transformers - Text Generation and Chapter 5 - Language Modeling Fundamentals in 'Hands-On Large Language Models'"
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

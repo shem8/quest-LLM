@@ -24,58 +24,77 @@ This quest explores the architecture, training paradigms, and diverse applicatio
 
 ## Learning Journey
 
-This quest is structured into 7 comprehensive steps:
+This quest is structured into 10 comprehensive steps:
 
 ### 1. 🚀 Understanding Large Language Models
 
 Gain an overview of what Large Language Models (LLMs) are and their significance in AI. Explore how these models have transformed the field, enabling machines to understand and generate human-like language.
 
-_📖 Reference: Chapter 1 - An Introduction to Large Language Models_
+_📖 Reference: Sets the quest context_
 
-### 2. 🏗️ The Architecture of LLMs
+### 2. 🔤 Tokenization Exploration
 
-Explore the fundamental architecture of LLMs, focusing on how they process and generate language. Dive deep into the Transformer architecture and attention mechanisms that power models like BERT and GPT.
+Understand tokenization as a crucial preprocessing step for LLMs. Learn how text is broken down into tokens that models can process.
 
-_📖 Reference: Chapter 2 - Tokens and Embeddings & Chapter 3 - Looking Inside Large Language Models_
+_📖 Reference: Chapter 2 - Tokens and Token Embeddings_
 
-### 3. 🎯 From Pretraining to Fine-tuning
+### 3. 🏗️ The Architecture of LLMs
 
-Understand the training paradigms that make LLMs so powerful, from initial pretraining on vast datasets to specialized fine-tuning for specific tasks.
+Explore the fundamental architecture of LLMs, focusing on how they process and generate language. Dive deep into the Transformer architecture and attention mechanisms.
 
-_📖 Reference: Chapter 11 - Fine-Tuning Representation Models for Classification & Chapter 12 - Fine-Tuning Generation Models_
+_📖 Reference: Chapter 3 - Exploring the Transformer Architecture_
 
-### 4. 🌐 Application Spectrum of LLMs
+### 4. 🎯 From Pretraining to Fine-tuning
 
-Discover the diverse real-world applications of LLMs across industries, from content generation to complex reasoning tasks.
+Understand the training stages of LLMs, emphasizing pretraining and fine-tuning. Learn how models are trained for general and specific tasks.
 
-_📖 Reference: Chapter 4 - Text Classification, Chapter 5 - Text Clustering and Topic Modeling, Chapter 6 - Prompt Engineering, Chapter 7 - Advanced Text Generation Techniques and Tools, Chapter 8 - Semantic Search and Retrieval-Augmented Generation & Chapter 9 - Multimodal Large Language Models_
+_📖 Reference: Chapter 4 - Pretraining and Fine-tuning_
 
-### 5. 🧪 Quiz: LLM Core Features
+### 5. 🔮 Simple Word Prediction
 
-Test your understanding of the core concepts and features that define Large Language Models.
+Implement a word prediction model to demonstrate language understanding. Practice predicting next words and adjusting model parameters.
 
-_📖 Reference: Concepts from Chapters 1-3 covering fundamental LLM features and architecture_
+_📖 Reference: Chapter 5 - Language Modeling Fundamentals_
 
-### 6. 🔮 Practical Implications and Future of LLMs
+### 6. 🌐 Application Spectrum of LLMs
 
-Explore the practical implications of LLMs in various domains and discuss their future potential and limitations.
+Discover the variety of applications where LLMs are making a significant impact. Learn about real-world uses like chatbots and semantic search.
 
-_📖 Reference: Chapter 10 - Creating Text Embedding Models & insights from all chapters on practical applications and future directions_
+_📖 Reference: Chapter 6 - Practical LLM Applications_
 
-### 7. 📚 Recap and Takeaways
+### 7. 🧪 Quiz: LLM Core Features
 
-Consolidate your learning with a comprehensive recap of key concepts and practical takeaways.
+Test your understanding of the foundational features of LLMs. Complete a quiz to reinforce your understanding of LLM fundamentals.
 
-_📖 Reference: Summary and synthesis of concepts from all chapters (1-12)_
+_📖 Reference: Based on information throughout the quest_
+
+### 8. ❓ Question Answering System
+
+Build a simple question-answering system using an LLM. Input questions against paragraphs and retrieve answers using a QA model.
+
+_📖 Reference: Chapter 10 - Developing Q&A with LLMs_
+
+### 9. 🔮 Practical Implications and Future of LLMs
+
+Reflect on the potential implications and future directions of LLMs. Engage in an open discussion about the future role of LLMs.
+
+_📖 Reference: Chapter 12 - The Future of Language Models_
+
+### 10. 📚 Recap and Takeaways
+
+Summarize the main learning points from the quest. Review the key concepts covered throughout the entire learning journey.
 
 ## What You'll Master
 
 By completing this quest, you will:
 
 - ✅ Understand the fundamental concepts behind Large Language Models
+- ✅ Learn tokenization and how text is processed by LLMs
 - ✅ Grasp the Transformer architecture and attention mechanisms
-- ✅ Learn about training paradigms from pretraining to fine-tuning
+- ✅ Understand training paradigms from pretraining to fine-tuning
+- ✅ Implement simple word prediction and language modeling
 - ✅ Explore real-world applications across different industries
+- ✅ Build a practical question-answering system
 - ✅ Gain insights into the future potential and current limitations of LLMs
 - ✅ Develop practical knowledge for implementing LLM-based solutions
 

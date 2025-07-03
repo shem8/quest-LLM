@@ -1,0 +1,33 @@
+id: the_architecture_of_llms
+learningObjectives:
+  - Reflect on how the Transformer architecture has changed the development of language models.
+hints:
+  - Think about the advantages provided by self-attention and parallelization.
+  - Reflect on performance improvements over traditional sequential models.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Now that we've cracked the basics, let's talk architecture—the Transformer architecture, to be exact. It's the beating heart of modern LLMs.
+          - text: Transformers revolutionized language modeling by introducing self-attention mechanisms, allowing models to weigh the significance of different words in context.
+          - text: This shift has made LLMs incredibly efficient and effective at handling complex language tasks.
+          - text: Given its importance, think about how this architecture transforms language processing. How do you perceive its impact on language model development over traditional models like RNNs or LSTMs?
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "Here's what you need to do:"
+          - text: Reflect on and articulate how self-attention and the structural benefits of Transformers have advanced language models beyond previous algorithms like RNNs.
+          - text: Consider the practical applications you've observed so far and how the architecture impacts these.
+          - text: "Expected outcome: Provide a concise answer highlighting the transformational role of Transformer architecture in enhancing model performance and capabilities."
+          - text: "Resource: Chapter 3 - Exploring the Transformer Architecture in 'Hands-On Large Language Models'"
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
