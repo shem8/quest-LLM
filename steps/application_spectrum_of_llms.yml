@@ -9,13 +9,18 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: The versatility of LLMs is nothing short of remarkable—encompassing text
+          - text:
+              The versatility of LLMs is nothing short of remarkable—encompassing text
               generation, sentiment analysis, and beyond.
-          - text: Imagine developing a chatbot that can pull in external information
+          - text: From text classification and clustering to prompt engineering and multimodal capabilities, LLMs span an incredible range of applications covered in chapters 4 through 9 of our source material.
+          - text:
+              Imagine developing a chatbot that can pull in external information
               on-the-fly or categorize issues without predefined labels.
-          - text: LLMs also shine in semantic search, allowing users to access relevant
+          - text:
+              LLMs also shine in semantic search, allowing users to access relevant
               information efficiently.
-          - text: How about we explore more of these applications? Let's proceed when you
+          - text:
+              How about we explore more of these applications? Let's proceed when you
               are ready!
     - actionId: ready_message
       params:

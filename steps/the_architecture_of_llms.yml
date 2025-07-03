@@ -9,13 +9,18 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: LLMs typically rely on the Transformer architecture, a game-changer in
+          - text:
+              LLMs typically rely on the Transformer architecture, a game-changer in
               neural network design.
-          - text: Transformers utilize attention mechanisms to focus on parts of the input
+          - text: As detailed in Chapters 2 and 3 of our reference material, understanding tokens, embeddings, and the inner workings of language models is crucial.
+          - text:
+              Transformers utilize attention mechanisms to focus on parts of the input
               sequence, making them powerful for language processing tasks.
-          - text: This architecture underpins models like BERT and the GPT family, both
+          - text:
+              This architecture underpins models like BERT and the GPT family, both
               integral to generative and representational tasks.
-          - text: Feel free to explore more about transformers via this insightful
+          - text:
+              Feel free to explore more about transformers via this insightful
               [guide](https://oreilly.com).
           - text: Ready to delve deeper? Just say the word!
     - actionId: ready_message

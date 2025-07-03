@@ -9,9 +9,12 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: Considering the current state of LLMs, how do you think they might shape
+          - text: As we've explored throughout our journey, from creating text embeddings in Chapter 10 to understanding practical applications across all domains, LLMs continue to evolve rapidly.
+          - text:
+              Considering the current state of LLMs, how do you think they might shape
               technology in the coming years?
-          - text: I'd love to hear your thoughts or plans to integrate these models into
+          - text:
+              I'd love to hear your thoughts or plans to integrate these models into
               projects.
 trigger:
   type: user_message
@@ -41,7 +44,7 @@ trigger:
             \    - Be flexible and focus on the essence of the
             answer rather than exact wording.
 
-            \ \ 
+            \ \
 
             \    # Response Guidelines:
 
@@ -60,7 +63,7 @@ trigger:
             \      - Encourage them to try again, being empathetic
             and supportive.
 
-            \ \ 
+            \ \
 
             \    # Tone and Style:
 

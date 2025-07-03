@@ -9,11 +9,15 @@ startFlow:
         person: lucca
         messages:
           - text: Look at you, reaching the end of our LLM expedition! 🎉
-          - text: We've journeyed through the architecture, training, and applications of
-              LLMs.
-          - text: Remember, these models are reshaping industries, providing vast
+          - text:
+              We've journeyed through the architecture, training, and applications of
+              LLMs, covering insights from all 12 chapters of "Hands-On Large Language Models."
+          - text: From understanding the fundamentals in Chapter 1 to exploring advanced applications and fine-tuning techniques, you've gained a comprehensive view of the field.
+          - text:
+              Remember, these models are reshaping industries, providing vast
               opportunities for innovation.
-          - text: Keep exploring, experimenting, and you might just be the next pioneer in
+          - text:
+              Keep exploring, experimenting, and you might just be the next pioneer in
               language AI!
           - text: Thanks for joining me, Lucca, on this quest. Until next time!
     - actionId: ready_message

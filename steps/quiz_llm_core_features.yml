@@ -9,8 +9,8 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: Time to check your knowledge on LLM fundamentals. Which feature is central
-              to the Transformer architecture used in LLMs?
+          - text: Time to check your knowledge on LLM fundamentals from our exploration of the first three chapters.
+          - text: Which feature is central to the Transformer architecture used in LLMs?
     - actionId: quiz_message
       name: quiz
       params:
@@ -31,7 +31,8 @@ trigger:
               params:
                 person: lucca
                 messages:
-                  - text: Not quite. While encoding is crucial, the transformer’s hallmark is
+                  - text:
+                      Not quite. While encoding is crucial, the transformer’s hallmark is
                       something else.
             - actionId: replay_action
               params:
@@ -42,7 +43,8 @@ trigger:
               params:
                 person: lucca
                 messages:
-                  - text: Bingo! The ability to focus on key elements is what makes transformers
+                  - text:
+                      Bingo! The ability to focus on key elements is what makes transformers
                       powerful.
             - actionId: finish_step
         C:
@@ -51,7 +53,8 @@ trigger:
               params:
                 person: lucca
                 messages:
-                  - text: No, that's more typical in CNNs. Perhaps revisit the architectural
+                  - text:
+                      No, that's more typical in CNNs. Perhaps revisit the architectural
                       discussion?
             - actionId: replay_action
               params:
