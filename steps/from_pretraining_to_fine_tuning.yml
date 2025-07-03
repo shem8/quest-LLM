@@ -1,0 +1,27 @@
+id: from_pretraining_to_fine_tuning
+learningObjectives:
+  - Understand the training stages of LLMs, highlighting pretraining and
+    fine-tuning.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "Training LLMs is a two-step dance: pretraining on a diverse text corpus,
+              and fine-tuning for specific tasks."
+          - text: Pretraining helps models grasp language nuances, while fine-tuning adapts
+              them to perform tasks like classification or instruction
+              following.
+          - text: This efficient approach means we can tailor a general model for a targeted
+              purpose without starting from scratch.
+          - text: When you're ready, let's continue to see these stages in action!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

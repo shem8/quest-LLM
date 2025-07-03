@@ -1,0 +1,28 @@
+id: understanding_large_language_models
+learningObjectives:
+  - Gain an overview of what Large Language Models (LLMs) are and their
+    significance in AI.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Welcome to the exciting world of Large Language Models, where machines
+              speak our language.
+          - text: These models, often referred to as LLMs, have transformed AI, enabling
+              machines to understand and generate human-like language.
+          - text: Whether it's creating chatbots or building search engines, LLMs are making
+              waves across numerous industries.
+          - text: We'll begin by understanding the scope and utility of these models in
+              real-world applications.
+          - text: Ready for this intellectual adventure? Let me know when to continue.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

@@ -1,0 +1,58 @@
+id: quiz_llm_core_features
+learningObjectives:
+  - Test your understanding of the foundational features of LLMs.
+hints:
+  - Think about how these models focus on different parts of input sequences.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Time to check your knowledge on LLM fundamentals. Which feature is central
+              to the Transformer architecture used in LLMs?
+    - actionId: quiz_message
+      name: quiz
+      params:
+        person: lucca
+        options:
+          - Neural Encoding
+          - Attention Mechanism
+          - Convolution Layers
+trigger:
+  type: chat_form_submitted
+  flowNode:
+    switch:
+      key: ${formSubmission}
+      cases:
+        A:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Not quite. While encoding is crucial, the transformer’s hallmark is
+                      something else.
+            - actionId: replay_action
+              params:
+                actionName: quiz
+        B:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Bingo! The ability to focus on key elements is what makes transformers
+                      powerful.
+            - actionId: finish_step
+        C:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: No, that's more typical in CNNs. Perhaps revisit the architectural
+                      discussion?
+            - actionId: replay_action
+              params:
+                actionName: quiz

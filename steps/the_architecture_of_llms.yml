@@ -1,0 +1,28 @@
+id: the_architecture_of_llms
+learningObjectives:
+  - Explore the fundamental architecture of LLMs, focusing on how they process
+    and generate language.
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: LLMs typically rely on the Transformer architecture, a game-changer in
+              neural network design.
+          - text: Transformers utilize attention mechanisms to focus on parts of the input
+              sequence, making them powerful for language processing tasks.
+          - text: This architecture underpins models like BERT and the GPT family, both
+              integral to generative and representational tasks.
+          - text: Feel free to explore more about transformers via this insightful
+              [guide](https://oreilly.com).
+          - text: Ready to delve deeper? Just say the word!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
