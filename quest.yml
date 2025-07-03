@@ -30,4 +30,4 @@ steps:
   - practical_implications_and_future_of_llms
   - recap_and_takeaways
 type: MODULE
-repository: null
+repository: https://github.com/trywilco/empty-starter-python
