@@ -10,7 +10,7 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: Great work exploring the architecture and training of LLMs! Now let's put our knowledge to the test with a quiz.
+          - text: Now let's put our knowledge to the test with a quiz.
           - text: We've covered a lot of ground - from understanding what LLMs are to diving deep into the Transformer architecture. As Chapter 3 of 'Hands-On Large Language Models' shows us, the self-attention mechanism is truly the heart of these powerful models.
           - text: So here's your challenge - How does the self-attention mechanism within the Transformer architecture contribute to its performance?
     - actionId: quiz_message
