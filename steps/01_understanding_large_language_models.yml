@@ -33,21 +33,12 @@ startFlow:
     - actionId: github_commit_file
       params:
         file: "${tokenizer.ipynb}"
-        fileName: tokenizer.ipynb
-        path: assets/
-        message: "Add tokenizer exploration notebook"
     - actionId: github_commit_file
       params:
         file: "${word_prediction.ipynb}"
-        fileName: word_prediction.ipynb
-        path: assets/
-        message: "Add word prediction notebook"
     - actionId: github_commit_file
       params:
         file: "${question_answering.ipynb}"
-        fileName: question_answering.ipynb
-        path: assets/
-        message: "Add question answering notebook"
 trigger:
   type: user_ready_response
   flowNode:
