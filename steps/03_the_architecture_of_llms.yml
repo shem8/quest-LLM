@@ -54,23 +54,23 @@ trigger:
           schema:
             correct: boolean
             reply: string
-        if:
-          conditions:
-            - conditionId: is_truthy
-              params:
-                value: ${outputs.user_architecture_response.value.correct}
-          then:
-            do:
-              - actionId: bot_message
-                params:
-                  person: lucca
-                  messages:
-                    - text: ${outputs.user_architecture_response.value.reply}
-              - actionId: finish_step
-          else:
-            do:
-              - actionId: bot_message
-                params:
-                  person: lucca
-                  messages:
-                    - text: ${outputs.user_architecture_response.value.reply}
+    if:
+      conditions:
+        - conditionId: is_truthy
+          params:
+            value: ${outputs.user_architecture_response.value.correct}
+      then:
+        do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+                - text: ${outputs.user_architecture_response.value.reply}
+          - actionId: finish_step
+      else:
+        do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+                - text: ${outputs.user_architecture_response.value.reply}
