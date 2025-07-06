@@ -13,7 +13,7 @@ startFlow:
           - text: Different tokenizers might convert the same sentence into varied forms of tokens, which influences how the model interprets the input.
           - text: We've already given you code to help you with tokenization - open the `tokenizer.ipynb` notebook and use it to explore different tokenizers.
           - text: |
-              :instruction[Using the GPT-2 tokenizer, find out how many tokens this sentence produces: "The quick brown fox jumps over the lazy dog." and respond with just the number.]
+              :instruction[Using the GPT-2 tokenizer, find out how many tokens this sentence produces: "Artificial intelligence is transforming the modern world." and respond with just the number.]
 trigger:
   type: user_message
   params:
@@ -26,17 +26,17 @@ trigger:
           prompt: |
             Please evaluate the user's answer for the tokenization challenge.
 
-            The user should respond with the number of tokens that the sentence 'The quick brown fox jumps over the lazy dog.' produces when tokenized with GPT-2. 
+            The user should respond with the number of tokens that the sentence 'Artificial intelligence is transforming the modern world.' produces when tokenized with GPT-2. 
 
-            The correct answer is 10 tokens.
+            The correct answer is 9 tokens.
 
             # Assessment Criteria
-            - Look for the number 10 in their response
-            - Accept variations like "10", "ten", "10 tokens", etc.
+            - Look for the number 9 in their response
+            - Accept variations like "9", "nine", "9 tokens", etc.
             - Focus on whether they identified the correct token count
 
             # Response Guidelines:
-            - If the user provides the correct answer (10), return 'correct: true'
+            - If the user provides the correct answer (9), return 'correct: true'
             - Provide a positive message congratulating them on understanding tokenization
             - If the user provides an incorrect number, return 'correct: false'  
             - Gently explain the correct answer and encourage them to try the tokenization again
