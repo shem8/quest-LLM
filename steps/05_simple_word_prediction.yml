@@ -1,35 +1,70 @@
 id: simple_word_prediction
 learningObjectives:
   - Implement a word prediction model to demonstrate language understanding.
-hints: []
+hints:
+  - "Check out Hugging Face Transformers documentation for text generation examples"
+  - "Chapter 5 of 'Hands-On Large Language Models' covers language modeling fundamentals"
 startFlow:
   do:
     - actionId: bot_message
       params:
         person: lucca
         messages:
-          - text: Roll up your sleeves—it's time to predict the future, one word at a time!
-          - text: We'll use pre-trained language models to guess what word might come next, given an input sequence.
-          - text: This is a fun way to see language models in action, flexing their understanding of context and syntax.
-          - text: Imagine finishing someone else's sentence accurately—it's all about picking up cues!
-    - actionId: create_new_jupyter_notebook
-      params:
-        query: Create a Jupyter notebook for word prediction using GPT-2, including setup code for next-word prediction with customizable parameters like temperature and max length
-    - actionId: bot_message
-      params:
-        person: lucca
-        messages:
-          - text: I've created a Jupyter notebook with a pre-configured script for next-word prediction using a language model like GPT-2.
-          - text: "Here's what you need to do:"
-          - text: Input partial sentences and observe the model's predicted continuations.
-          - text: Tweak parameters like temperature and max length to see how predictions change.
-          - text: Challenge yourself with complex sentences to explore the model's comprehension depth.
-          - text: "Resources: Hugging Face Transformers - Text Generation and Chapter 5 - Language Modeling Fundamentals in 'Hands-On Large Language Models'"
-    - actionId: ready_message
-      params:
-        person: lucca
+          - text: Time to roll up our sleeves and see language models in action! We're going to build a word prediction system.
+          - text: Think about how you can often guess what someone's about to say next - that's exactly what we're teaching our model to do.
+          - text: We'll use a pre-trained model like GPT-2 to predict the next word in a sequence. It's fascinating to watch how well these models understand context and language patterns.
+          - text: We've set up a `word_prediction.ipynb` notebook with everything you need to start predicting words like a pro.
+          - text: |
+              :instruction[Open the notebook and experiment with word prediction. Try the prompt "The future of artificial intelligence is" and tell me what creative completion the model generates with temperature=0.8]
 trigger:
-  type: user_ready_response
+  type: user_message
+  params:
+    person: lucca
   flowNode:
     do:
-      - actionId: finish_step
+      - actionId: parse_user_response
+        name: user_prediction_response
+        params:
+          prompt: |
+            Please evaluate the user's response about their word prediction experiment.
+
+            The user should have tried the prompt "The future of artificial intelligence is" with temperature=0.8 and shared what completion the model generated.
+
+            # Assessment Criteria
+            - Look for evidence they ran the experiment (any text completion or description of results)
+            - Accept any reasonable response that shows they interacted with the model
+            - Focus on whether they engaged with the word prediction task
+
+            # Response Guidelines:
+            - If the user provides any completion or describes their experiment, return 'correct: true'
+            - Provide an encouraging message about their exploration of language models
+            - If the response doesn't show engagement with the task, return 'correct: false'
+            - Gently encourage them to try the word prediction experiment
+
+            # Tone and Style:
+            - Use friendly and encouraging language
+            - Be supportive of their learning process
+            - Focus on helping them understand language model capabilities
+          schema:
+            correct: boolean
+            reply: string
+    if:
+      conditions:
+        - conditionId: is_truthy
+          params:
+            value: ${outputs.user_prediction_response.value.correct}
+      then:
+        do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+                - text: ${outputs.user_prediction_response.value.reply}
+          - actionId: finish_step
+      else:
+        do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+                - text: ${outputs.user_prediction_response.value.reply}
