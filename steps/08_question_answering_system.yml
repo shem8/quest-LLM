@@ -45,7 +45,9 @@ trigger:
             - Provide an encouraging message about successfully building their Q&A system
             - Be generous with acceptance - the goal is learning, not perfect accuracy
             - If they seem to have tried but got a different answer, still return 'correct: true' and encourage them to double-check their system or try different search terms
+            - If they provide an incorrect answer or haven't built the system yet, return 'correct: false'
             - DO NOT reveal the expected answer in the response to the user
+            - Guide them back to the notebook and encourage them to complete the Q&A system build
 
             # Tone and Style:
             - Use friendly and encouraging language
@@ -54,9 +56,23 @@ trigger:
           schema:
             correct: boolean
             reply: string
-      - actionId: bot_message
-        params:
-          person: lucca
-          messages:
-            - text: ${{ user_qa_response.reply }}
-      - actionId: finish_step
+    if:
+      conditions:
+        - conditionId: is_truthy
+          params:
+            value: ${outputs.user_qa_response.value.correct}
+      then:
+        do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+                - text: ${outputs.user_qa_response.value.reply}
+          - actionId: finish_step
+      else:
+        do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+                - text: ${outputs.user_qa_response.value.reply}
