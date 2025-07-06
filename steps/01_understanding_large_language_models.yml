@@ -27,6 +27,10 @@ startFlow:
           - text: LLMs underpin technologies such as chatbots, automated summarizers, and language translation tools.
           - text: The scope of LLMs extends far beyond what's initially apparent—transforming industries by automating tasks and generating human-like text.
           - text: This is just the beginning of our incredible journey together! Are you ready to dive deeper and unlock the secrets of Large Language Models?
+    - actionId: ready_message
+      params:
+        person: lucca
+          
 trigger:
   type: user_ready_response
   flowNode:
