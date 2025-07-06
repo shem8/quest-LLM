@@ -8,15 +8,14 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: Wow, what a journey! Let's take a moment to reflect on what we've learned about Large Language Models.
-          - text: We've explored foundational concepts like tokenization and Transformer architecture, diving deep into the life cycle of LLMs from pretraining to fine-tuning.
-          - text: Practical applications have shown us the real-world impact these models can have, and we've peeked into the future, pondering the exciting and challenging possibilities ahead.
-          - text: Remember, LLMs are tools with vast potential—keep exploring, experimenting, and evolving your understanding.
-          - text: Thanks for joining me, Lucca, on this adventure. The future of AI looks bright with curious minds like yours ready to explore it!
-          - text: "Resource: 'Hands-On Large Language Models' for further reading and exploration."
-    - actionId: ready_message
-      params:
-        person: lucca
+          - text: What an incredible journey we've been on together! Let's take a moment to celebrate everything you've learned about Large Language Models.
+          - text: We started with the fundamentals - understanding how tokenization breaks down language and how the Transformer architecture makes it all possible.
+          - text: We explored the fascinating world of pretraining and fine-tuning, seeing how raw computational power becomes specialized intelligence.
+          - text: You got hands-on experience building word prediction systems and question-answering tools, witnessing the magic of LLMs in action.
+          - text: We discussed real-world applications and pondered the future implications of this transformative technology.
+          - text: Remember, this is just the beginning! LLMs are evolving rapidly, and there's always more to discover and explore.
+          - text: Keep experimenting, keep learning, and most importantly, keep that curiosity alive. The future of AI is bright with minds like yours shaping it!
+    - actionId: finish_step
 trigger:
   type: user_ready_response
   flowNode:
