@@ -1,6 +1,5 @@
 id: quiz_llm_core_features
-learningObjectives:
-  - Test your understanding of the foundational features of LLMs.
+learningObjectives: []
 hints:
   - Think about how the model assigns importance to different parts of the input data.
   - "Chapter 3 of 'Hands-On Large Language Models' explores the Transformer architecture in detail"

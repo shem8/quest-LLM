@@ -1,6 +1,5 @@
 id: recap_and_takeaways
-learningObjectives:
-  - Summarize the main learning points from the quest.
+learningObjectives: []
 hints: []
 startFlow:
   do:
