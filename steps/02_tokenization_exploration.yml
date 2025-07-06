@@ -13,7 +13,7 @@ startFlow:
           - text: Different tokenizers might convert the same sentence into varied forms of tokens, which influences how the model interprets the input.
           - text: We've already given you code to help you with tokenization - open the `tokenizer.ipynb` notebook and use it to explore different tokenizers.
           - text: |
-              :instruction[Using the GPT-2 tokenizer, find out how many tokens this sentence produces: "Artificial intelligence is transforming the modern world." and respond with just the number.]
+              :instruction[Using the GPT-2 tokenizer, find out how many tokens this sentence produces: "Artificial intelligence is transforming the modern world."]
 trigger:
   type: user_message
   params:
@@ -39,7 +39,8 @@ trigger:
             - If the user provides the correct answer (9), return 'correct: true'
             - Provide a positive message congratulating them on understanding tokenization
             - If the user provides an incorrect number, return 'correct: false'  
-            - Gently explain the correct answer and encourage them to try the tokenization again
+            - DO NOT reveal the correct answer - instead encourage them to try again using the tokenizer notebook
+            - Suggest they double-check their tokenization process
 
             # Tone and Style:
             - Use friendly and encouraging language

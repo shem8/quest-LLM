@@ -40,6 +40,7 @@ trigger:
             - Provide an encouraging message about their exploration of language models
             - If the completion seems unreasonable or unrelated, return 'correct: false'
             - Gently encourage them to provide a more appropriate completion
+            - DO NOT provide example completions or reveal what a "correct" answer should look like
 
             # Tone and Style:
             - Use friendly and encouraging language

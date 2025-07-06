@@ -44,8 +44,8 @@ trigger:
             - If the user provides "autoregressive" or similar correct variations, return 'correct: true'
             - Congratulate them and explain why this concept is so important for understanding LLMs
             - If they provide an incorrect answer, return 'correct: false'
-            - Gently guide them back to Chapter 3 and hint about the specific section on token-by-token generation
-            - Encourage them to look for the technical term that describes this behavior
+            - DO NOT reveal the correct answer - instead guide them back to Chapter 3 and hint about the specific section on token-by-token generation
+            - Encourage them to look for the technical term that describes this behavior without giving it away
 
             # Tone and Style:
             - Use friendly and encouraging language

@@ -28,8 +28,9 @@ trigger:
         name: user_answer
         params:
           prompt: |
-            Please evaluate the user's answer in relation to the expected answer: 
-            I expect a simple understanding that LoRA and QLoRA's efficiency gains (like reducing memory from ~4GB to ~1GB) lower barriers and allow more people/smaller organizations to fine-tune LLMs, which could lead to more innovation but also potential quality or misuse concerns.
+            Please evaluate the user's answer about the practical implications of LoRA and QLoRA techniques.
+
+            The user should demonstrate understanding that these techniques make AI development more accessible by reducing computational requirements, which has both opportunities and potential concerns.
 
             # Assessment Criteria
 
@@ -42,6 +43,7 @@ trigger:
 
             - If the user shows basic understanding of the accessibility impact, return 'correct: true'
             - If the answer is completely off-topic or shows no understanding, return 'correct: false'
+            - DO NOT reveal the specific expected answer - instead encourage them to think about how making AI more accessible might impact society
             - Be very generous in accepting different ways of expressing the same idea
 
             # Tone and Style:

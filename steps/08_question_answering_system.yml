@@ -44,7 +44,8 @@ trigger:
             - If the user mentions "Sputnik" or shows they built and ran their system, return 'correct: true'
             - Provide an encouraging message about successfully building their Q&A system
             - Be generous with acceptance - the goal is learning, not perfect accuracy
-            - If they seem to have tried but got a different answer, still return 'correct: true' and gently mention the expected answer
+            - If they seem to have tried but got a different answer, still return 'correct: true' and encourage them to double-check their system or try different search terms
+            - DO NOT reveal the expected answer in the response to the user
 
             # Tone and Style:
             - Use friendly and encouraging language
