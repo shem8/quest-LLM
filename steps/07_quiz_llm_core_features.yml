@@ -3,14 +3,16 @@ learningObjectives:
   - Test your understanding of the foundational features of LLMs.
 hints:
   - Think about how the model assigns importance to different parts of the input data.
+  - "Chapter 3 of 'Hands-On Large Language Models' explores the Transformer architecture in detail"
 startFlow:
   do:
     - actionId: bot_message
       params:
         person: lucca
         messages:
-          - text: Alright, it's quiz time! Let's see how well we've absorbed the magic of LLMs.
-          - text: How does the self-attention mechanism within the Transformer architecture contribute to its performance?
+          - text: Great work exploring the architecture and training of LLMs! Now let's put our knowledge to the test with a quiz.
+          - text: We've covered a lot of ground - from understanding what LLMs are to diving deep into the Transformer architecture. As Chapter 3 of 'Hands-On Large Language Models' shows us, the self-attention mechanism is truly the heart of these powerful models.
+          - text: So here's your challenge - How does the self-attention mechanism within the Transformer architecture contribute to its performance?
     - actionId: quiz_message
       name: quiz
       params:
@@ -31,8 +33,7 @@ trigger:
               params:
                 person: lucca
                 messages:
-                  - text: Exactly! This mechanism allows LLMs to weigh the importance of various words in a sentence for better contextual understanding.
-                  - text: "Resource: Chapter 3 - Exploring the Transformer Architecture in 'Hands-On Large Language Models'"
+                  - text: Exactly! The self-attention mechanism is like giving the model selective focus - it can weigh the importance of different words in a sentence for better understanding.
             - actionId: finish_step
         B:
           do:
