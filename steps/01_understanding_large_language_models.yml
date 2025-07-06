@@ -11,13 +11,14 @@ startFlow:
         messages:
           - text:
               Welcome to the exciting world of Large Language Models, where machines
-              speak our language.
+              speak our language! This quest is based on the "Hands-On Large Language Models"
+              book by Jay Alammar and Maarten Grootendorst.
+          - text: "![](${book.png})"
           - text:
-              These models, often referred to as LLMs, have transformed AI, enabling
-              machines to understand and generate human-like language.
-          - text:
-              Whether it's creating chatbots or building search engines, LLMs are making
-              waves across numerous industries.
+              Whether it's creating chatbots or building search engines, these models,
+              often referred to as LLMs, have transformed AI, enabling machines to
+              understand and generate human-like language. LLMs are making waves
+              across numerous industries.
           - text:
               We'll begin by understanding the scope and utility of these models in
               real-world applications.
