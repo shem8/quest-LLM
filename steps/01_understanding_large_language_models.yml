@@ -5,6 +5,8 @@ learningObjectives:
 hints: []
 startFlow:
   do:
+    # refresh codespace after we added files
+    - actionId: recreate_codespace
     - actionId: bot_message
       params:
         person: lucca
