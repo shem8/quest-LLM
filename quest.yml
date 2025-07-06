@@ -19,6 +19,7 @@ skills:
   - semantic search
   - chatbot development
 steps:
+  - select_framework
   - understanding_large_language_models
   - codespace_start
   - tokenization_exploration
