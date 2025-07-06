@@ -20,6 +20,7 @@ skills:
   - chatbot development
 steps:
   - understanding_large_language_models
+  - codespace_start
   - tokenization_exploration
   - the_architecture_of_llms
   - from_pretraining_to_fine_tuning
