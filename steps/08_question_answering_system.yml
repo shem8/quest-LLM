@@ -2,7 +2,7 @@ id: question_answering_system
 learningObjectives:
   - Build a complete question-answering system using Wikipedia API and pre-trained LLMs.
   - Learn to handle long documents by implementing text chunking strategies.
-  - Integrate multiple components: data fetching, text processing, and ML inference.
+  - "Integrate multiple components: data fetching, text processing, and ML inference."
 hints:
   - "Explore the Transformers QA Pipeline documentation for implementation examples"
   - "Chapter 10 of 'Hands-On Large Language Models' covers developing Q&A systems with LLMs"
